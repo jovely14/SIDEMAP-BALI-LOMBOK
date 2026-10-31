@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>SIDEMAP Makro-Plastik</title>
+<title>SIDEMAP · Sistem Prediksi Makroplastik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
@@ -159,7 +159,9 @@ dialog p,dialog li{font-size:13px;margin:4px 0}
 .chip{min-width:0;max-width:100%}
 #alertChipTxt{overflow:hidden;text-overflow:ellipsis}
 #alertChipTxt .sm{display:none}
+.logo-its{height:40px;width:auto;flex:none;display:block}
 @media (max-width:860px){
+  .logo-its{height:32px}
   header.top{gap:8px;padding:6px 12px}
   #alertChipTxt .lg{display:none} #alertChipTxt .sm{display:inline}
   .brand b{font-size:18px}
@@ -194,11 +196,12 @@ dialog p,dialog li{font-size:13px;margin:4px 0}
         <path d="M5 26c4-5 7-5 10-2s6 3 14-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
         <circle cx="12" cy="11" r="2.6" fill="#fff"/><circle cx="19" cy="8.5" r="1.9" fill="#fff" opacity=".8"/><circle cx="24.5" cy="11.5" r="1.4" fill="#fff" opacity=".6"/>
       </svg>
-      <div><b>SIDEMAP</b><small>Sistem Deteksi Pergerakan Makro-Plastik</small></div>
+      <div><b>SIDEMAP</b><small>Sistem Prediksi Makroplastik</small></div>
     </div>
     <span class="spacer"></span>
     <button class="chip" id="alertChip" title="Ringkasan peringatan kawasan lindung"><span class="dot"></span><span id="alertChipTxt">Memuat…</span></button>
     <button class="iconbtn" id="aboutBtn" aria-label="Tentang SIDEMAP">Tentang</button>
+    <img class="logo-its" src="logo-its.png" alt="Logo ITS" width="40" height="40">
   </header>
 
   <aside class="panel">
@@ -251,7 +254,7 @@ dialog p,dialog li{font-size:13px;margin:4px 0}
 
 <dialog id="about"><div class="in">
   <h2>SIDEMAP</h2>
-  <p><b>SI</b>stem <b>DE</b>teksi pergerakan <b>MA</b>kro-<b>P</b>lastik. Dibaca “sai-de-map”.</p>
+  <p><b>SIDEMAP</b>: Sistem Prediksi Makroplastik.</p>
   <h3>Cara kerja singkat</h3>
   <p>Ribuan partikel penanda dilepas dari 22 titik sumber (muara sungai, kota, pelabuhan, jalur kapal) di sekitar Selat Bali dan Selat Lombok, lalu digerakkan oleh arus laut permukaan per jam (Copernicus Marine, resolusi sekitar 9 km) dan, bila dipilih, dorongan angin ERA5. Pelacakan mundur dilakukan dari 5 titik pantai untuk menebak asal sampah.</p>
   <h3>Yang perlu diingat</h3>
@@ -1451,7 +1454,7 @@ function snapCanvas(mode) {
   o.strokeStyle = '#fff'; o.lineWidth = 2.4; o.lineCap = 'round'; o.beginPath(); o.moveTo(20, 41); o.bezierCurveTo(27, 32, 31, 32, 35, 37); o.bezierCurveTo(40, 42, 44, 39, 49, 32); o.stroke();
   o.fillStyle = '#fff'; [[26, 24, 3], [34, 21, 2.2], [41, 25, 1.6]].forEach(([x, y, r]) => { o.beginPath(); o.arc(x, y, r, 0, 7); o.fill(); });
   o.fillStyle = th.ink; o.font = '700 21px ' + FNT_D; o.fillText('SIDEMAP', 64, 32);
-  o.fillStyle = th.ink2; o.font = '12px ' + FNT; o.fillText('Sistem Deteksi Pergerakan Makro-Plastik', 64, 49);
+  o.fillStyle = th.ink2; o.font = '12px ' + FNT; o.fillText('Sistem Prediksi Makroplastik', 64, 49);
   o.textAlign = 'right'; o.fillStyle = th.ink; o.font = '600 15px ' + FNT_D; o.fillText(TAB_TITLE[tab], W - 16, 28);
   o.fillStyle = th.ink2; o.font = '12px ' + FNT;
   const sub = mapSubtitle(tab); let t = sub; while (t.length > 8 && o.measureText(t).width > W - 360) t = t.slice(0, -2);
