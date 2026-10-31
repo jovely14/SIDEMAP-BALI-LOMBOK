@@ -1,0 +1,19 @@
+SIDEMAP - Sistem Deteksi Pergerakan Makro-Plastik
+
+CARA MEMBUKA
+1. Klik dua kali  mulai.bat  (Windows). Browser akan terbuka di alamat http://localhost:8000
+   Biarkan jendela hitam tetap terbuka selama SIDEMAP dipakai; tutup jendela itu untuk berhenti.
+2. Bila memakai Mac/Linux atau tanpa mulai.bat: buka terminal di folder ini, jalankan
+      python3 -m http.server 8000
+   lalu buka http://localhost:8000 di Chrome, Edge, atau Firefox.
+
+PENTING
+- index.html tidak bisa dibuka dengan klik dua kali langsung, karena browser menolak memuat folder data/ dari file lokal. Gunakan langkah di atas.
+- Jangan memindahkan index.html keluar dari folder ini; folder data/ harus tetap berdampingan.
+- Peta dasar dan font butuh internet; bila offline, peta tetap tampil dengan huruf bawaan.
+- Untuk dibagikan ke orang lain tanpa Python: unggah seluruh folder ini ke GitHub Pages, Netlify, atau Cloudflare Pages.
+
+ISI FOLDER
+index.html   halaman SIDEMAP
+data/        hasil Ocean Parcels yang sudah dipadatkan (jangan diubah)
+mulai.bat    pembuka cepat untuk Windows
